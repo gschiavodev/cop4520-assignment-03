@@ -8,6 +8,6 @@ namespace problem_01
 	constexpr size_t NUM_PRESENTS = 500000;
 
 	// Main function
-	void main();
+	int main();
 
 }

@@ -4,7 +4,7 @@
 #include <iomanip>
 
 // Local includes
-#include "main.hpp"
+#include "problem_01.hpp"
 #include "servant.hpp"
 
 // Static attributes

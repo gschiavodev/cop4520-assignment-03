@@ -24,6 +24,12 @@
     <ClCompile Include="source\servant.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\problem_01.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\problem_02.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\present.hpp">
@@ -32,7 +38,10 @@
     <ClInclude Include="include\servant.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\main.hpp">
+    <ClInclude Include="include\problem_01.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\problem_02.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
