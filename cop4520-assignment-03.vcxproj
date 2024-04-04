@@ -151,17 +151,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\mars_rover.cpp" />
     <ClCompile Include="source\problem_01.cpp" />
     <ClCompile Include="source\problem_02.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\present.cpp" />
     <ClCompile Include="source\servant.cpp" />
+    <ClCompile Include="source\temperature_sensor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\problem_01.hpp" />
     <ClInclude Include="include\present.hpp" />
     <ClInclude Include="include\servant.hpp" />
     <ClInclude Include="include\problem_02.hpp" />
+    <ClInclude Include="include\temperature_sensor.hpp" />
+    <ClInclude Include="include\mars_rover.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -30,6 +30,12 @@
     <ClCompile Include="source\problem_02.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\temperature_sensor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\mars_rover.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\present.hpp">
@@ -42,6 +48,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\problem_02.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\temperature_sensor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mars_rover.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
