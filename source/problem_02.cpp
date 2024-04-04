@@ -13,12 +13,12 @@ int problem_02::main()
 	// Create mars rover
 	MarsRover rover;
 
-	// Simulation loop (N_REPORT_INTERVALS per day)
-	for (size_t i = 0; i < (24 / REPORT_INTERVAL_HOUR); i++)
+	// Simulation loop
+	for (size_t i = 0; i < (N_OPERATIONAL_HOURS / REPORT_INTERVAL_HOUR); i++)
 	{
 
 		// 
-		while (rover.get_time() <= (REPORT_INTERVAL_HOUR * 60))
+		while (rover.get_time() < ((i + 1) * REPORT_INTERVAL_MIN))
 		{
 
 			// Sleep (seconds so we can test the program)
@@ -28,15 +28,18 @@ int problem_02::main()
 			// Increment the time
 			rover.increment_time();
 
+			// Reset the data in preparation for the next minute
+			rover.reset_sample_interval_data();
+
 		}
 
 		// Generate a report
 		rover.generate_report();
 
-		// Reset the data in preparation for the next minute
-		rover.reset_report_interval_data();
-
 	}
+
+	// Shutdown the rover
+	rover.shutdown();
 
 	// Exit
 	return 0;

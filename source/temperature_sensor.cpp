@@ -39,17 +39,23 @@ void problem_02::TemperatureSensor::collect_data()
 	// Seed random number generator
 	seed_random_number_generator();
 
-	// Wait for the rover to be ready to collect data
-	rover.wait_for_rover_to_be_ready_to_collect_data();
+	// Loop until the rover is no longer operational
+	while (rover.is_operational())
+	{
 
-	// Collect data (random temperature between -100F and 70F)
-	set_temperature(generate_random_temperature(-100, 70));
+		// Wait for the rover to be ready to collect data
+		rover.wait_for_rover_to_be_ready_to_collect_data();
 
-	// Send data to the rover
-	rover.send_temperature_data_to_rover(get_temperature());
+		// Collect data (random temperature between -100F and 70F)
+		set_temperature(generate_random_temperature(-100, 70));
 
-	// Wait for the rover to signal that the data has been collected
-	rover.wait_for_rover_to_collect_data();
+		// Send data to the rover
+		rover.send_temperature_data_to_rover(get_temperature());
+
+		// Wait for the rover to signal that the data has been collected
+		rover.wait_for_rover_to_collect_data();
+
+	}
 
 }
 
@@ -67,6 +73,7 @@ double problem_02::TemperatureSensor::generate_random_temperature(double min, do
 
 	// Generate a random temperature between min and max (inclusive) (Fahrenheit)
 	return min + static_cast<double>(rand() % static_cast<int>(max - min));
+
 
 }
 

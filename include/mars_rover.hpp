@@ -22,6 +22,9 @@ namespace problem_02
 
 	private:
 
+		// Rover status
+		std::atomic<bool> rover_is_operational;
+
 		// Time
 		size_t time;
 
@@ -38,7 +41,7 @@ namespace problem_02
 
 		// Data (enough temperature data for one report interval)
 		std::atomic<size_t> samples_collected_during_sample_interval;
-		std::vector<double> data;
+		std::vector<std::vector<double>> data; // sensor data for each minute [60_MIN * N_OPERATIONAL_HOURS ][N_TEMPERATURE_SENSORS]
 		std::mutex data_mutex;
 
 		// Condition variable for temperature sensors (shared with TemperatureSensor)
@@ -73,9 +76,11 @@ namespace problem_02
 		void wait_for_rover_to_be_ready_to_collect_data();
 		void wait_for_rover_to_collect_data();
 		void send_temperature_data_to_rover(double temperature);
-		void reset_report_interval_data();
 		void reset_sample_interval_data();
+		void reset_report_interval_data();
 		void generate_report();
+		bool is_operational();
+		void shutdown();
 
 	};
 
