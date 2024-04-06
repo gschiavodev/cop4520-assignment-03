@@ -402,3 +402,5 @@ desktop.ini
 
 # My Workspace
 *.pdf
+int/
+bin/
