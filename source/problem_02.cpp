@@ -1,5 +1,6 @@
 
 // System includes
+#include <iostream>
 #include <chrono>
 #include <thread>
 
@@ -21,6 +22,9 @@ int problem_02::main()
 		while (rover.get_time() < ((i + 1) * REPORT_INTERVAL_MIN))
 		{
 
+			// Output message for the current time
+			std::cout << "Getting samples for minute " << rover.get_time() << std::endl;
+
 			// Sleep (seconds so we can test the program)
 			// std::this_thread::sleep_for(std::chrono::minutes(SAMPLE_INTERVAL_MIN));
 			std::this_thread::sleep_for(std::chrono::seconds(SAMPLE_INTERVAL_MIN));
@@ -32,6 +36,9 @@ int problem_02::main()
 			rover.reset_sample_interval_data();
 
 		}
+
+		// Space
+		std::cout << std::endl;
 
 		// Generate a report
 		rover.generate_report();

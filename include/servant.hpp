@@ -4,6 +4,8 @@
 #include <list>
 #include <vector>
 #include <mutex>
+#include <atomic>
+#include <condition_variable>
 #include <memory>
 
 // Local includes

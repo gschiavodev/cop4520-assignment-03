@@ -1,5 +1,8 @@
 #pragma once
 
+// System includes
+#include <cstddef>
+
 namespace problem_02
 {
 

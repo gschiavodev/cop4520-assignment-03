@@ -51,7 +51,7 @@ int problem_01::main()
 	{
 
 		// Wait for a random amount of time
-		std::this_thread::sleep_for(std::chrono::milliseconds(rand() % 100));
+		std::this_thread::sleep_for(std::chrono::microseconds(rand() % 1000));
 
 		// Choose a random present to check
 		std::unique_ptr<size_t> minotaur_check_request = std::make_unique<size_t>(rand() % NUM_PRESENTS);

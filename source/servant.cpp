@@ -2,6 +2,7 @@
 // System includes
 #include <iostream>
 #include <iomanip>
+#include <algorithm>
 
 // Local includes
 #include "problem_01.hpp"
